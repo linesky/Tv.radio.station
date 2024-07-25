@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Streaming: {{ filename }}</title>
+</head>
+<body>
+    <h2>Streaming: {{ filename }}</h2>
+    <video controls>
+        <source src="{{ url_for('range_request', filename=filename) }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <br>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
+
